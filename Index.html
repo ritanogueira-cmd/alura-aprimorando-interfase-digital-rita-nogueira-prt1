@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>⊹ ࣪ ˖ ໒꒱ Blog de Desenhos e Séries da Rita!</title>
+    <title>⊹ ࣪ ˖ ໒꒱ Blog de Desenhos e Séries da Rita! ♡</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
@@ -14,12 +14,16 @@
 
     <header class="cabecalho">
         <div class="container">
-            <h1>⊹ ࣪ ˖ ໒꒱ Blog de Desenhos e Séries da Rita! ♡</h1>
+
+            <h1>
+                ⊹ ࣪ ˖ ໒꒱ Blog de Desenhos e Séries da Rita! ♡
+            </h1>
 
             <p>
                 𝜗ৎ ❝Compartilhando o conhecimento de animações,
                 séries e filmes❞ 𝜗ৎ
             </p>
+
         </div>
     </header>
 
@@ -27,6 +31,8 @@
     <main class="container">
 
         <section class="posts">
+
+            <!-- PRIMEIRO POST -->
 
             <article class="post">
 
@@ -45,7 +51,7 @@
                     </h2>
 
                     <p>
-                        <strong>Por:</strong> Rita de Cássia ⚝
+                        Por: Rita de Cássia ⚝
                     </p>
 
                     <p>
@@ -69,6 +75,8 @@
             </article>
 
 
+            <!-- SEGUNDO POST -->
+
             <article class="post">
 
                 <img
@@ -86,15 +94,17 @@
                     </h2>
 
                     <p>
-                        <strong>Por:</strong> Rita de Cássia ⚝
+                        Por: Rita de Cássia ⚝
                     </p>
 
                     <ul class="lista-series">
+
                         <li>1. Avatar, a lenda de Aang</li>
                         <li>2. Steven Universo</li>
                         <li>3. Cowboy Bebop</li>
                         <li>4. Evangelion</li>
                         <li>5. O Problema Dos 3 Corpos</li>
+
                     </ul>
 
                     <div class="botoes">
@@ -128,42 +138,7 @@
     </footer>
 
 
-    <script>
-
-        const botoes = document.querySelectorAll(".botoes button");
-
-        botoes.forEach(function (botao) {
-
-            let curtiu = false;
-
-            botao.addEventListener("click", function () {
-
-                const numeroSpan = botao.querySelector("span");
-                const quantidadeAtual = Number(numeroSpan.textContent);
-
-                if (curtiu === false) {
-
-                    numeroSpan.textContent = quantidadeAtual + 1;
-
-                    curtiu = true;
-
-                    botao.classList.add("curtido");
-
-                } else {
-
-                    numeroSpan.textContent = quantidadeAtual - 1;
-
-                    curtiu = false;
-
-                    botao.classList.remove("curtido");
-
-                }
-
-            });
-
-        });
-
-    </script>
+    <script src="script.js"></script>
 
 </body>
 
