@@ -1,1 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>⊹ ࣪ ˖ ໒꒱ Blog de Desenhos e Séries da Rita!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+    <header>
+        <h1>⊹ ࣪ ˖ ໒꒱ Blog de Desenhos e Séries da Rita! ♡</h1>
+        <p>𝜗ৎ ❝Compartilhando o conhecimento de animações, séries e filmes❞ 𝜗ৎ</p>
+    </header>
+
+    <main>
+        <article>  
+            <img src="https://github.com/ritanogueira-cmd/pagina-web-rita-desenhinho-unicornio/blob/main/imagem-blog.png?raw=true" alt="unicórnio fofo">
+            <div>
+                <p class="artigo-autor">Meu primeiro post ꉂ(˵˃ ᗜ ˂˵)</p>
+                <h2>Meu primeiro post sobre desenhos e séries! ✐</h2>
+                <p>Por: Rita de Cássia ⚝</p>
+                <p>Seja bem-vindo/a ao meu blog de desenhos e séries!!! ^^</p>
+                <button class="botao-curtir">🐿️ <span>0</span></button>
+                <button class="botao-curtir">🎀 <span>0</span></button>
+            </div>
+        </article>
+
+        <article>
+            <img src="https://github.com/ritanogueira-cmd/pagina-web-rita-desenhinho-unicornio/blob/main/segundo-post.png?raw=true" alt="unicórnio fofo">
+            <div>
+                <p class="artigo-autor">Meu segundo post (˶ᵔ ᵕ ᵔ˶)</p>
+                <h2>Tier list: Desenhos e/ou séries! ✐</h2>
+                <p>Por: Rita de Cássia ⚝</p>
+                <ul>
+                    <li>1. Avatar, a lenda de Aang</li>
+                    <li>2. Steven Universo</li>
+                    <li>3. Cowboy Bebop</li>
+                    <li>4. Evangelion</li>
+                    <li>5. O Problema Dos 3 Corpos</li>
+                </ul>
+                <button class="botao-curtir">🐿️ <span>0</span></button>
+                <button class="botao-curtir">🎀 <span>0</span></button>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <p class="direitos">Todos os direitos estão reservados ao autor do blog - Rita de Cássia Souza Nogueira</p>
+    </footer>
+
+    <script>
+        const botoes = document.querySelectorAll("button");
+
+        botoes.forEach(function (botao) {
+            let curtiu = false;
+            botao.addEventListener("click", function () {
+                let numeroSpan = botao.querySelector("span"); 
+                let quantidadeAtual = Number(numeroSpan.textContent);
+
+                if (curtiu === false) {
+                    numeroSpan.textContent = quantidadeAtual + 1;
+                    curtiu = true;
+                    botao.style.backgroundColor = "rgb(246, 126, 146)";
+                    botao.style.color = "white";
+                } else {
+                    numeroSpan.textContent = quantidadeAtual - 1;
+                    curtiu = false;
+                    botao.style.backgroundColor = "rgb(245, 214, 219)";
+                    botao.style.color = "rgb(246, 126, 146)";
+                }
+            });
+        });
+    </script>
+</body>
+</html>
