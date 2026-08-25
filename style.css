@@ -1,26 +1,31 @@
+/* =========================
+   CONFIGURAÇÕES GERAIS
+========================= */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-
-
 body {
     min-height: 100vh;
 
     font-family: Arial, Helvetica, sans-serif;
-
-    color: rgb(45, 112, 112);
 
     background: linear-gradient(
         135deg,
         rgb(253, 235, 238) 0%,
         rgb(218, 245, 237) 100%
     );
+
+    color: rgb(45, 112, 112);
 }
 
 
+/* =========================
+   CONTAINER
+========================= */
 
 .container {
     width: 90%;
@@ -30,6 +35,9 @@ body {
 }
 
 
+/* =========================
+   CABEÇALHO
+========================= */
 
 .cabecalho {
     padding: 30px 0;
@@ -42,9 +50,7 @@ body {
 
     background-color: rgb(245, 214, 219);
 
-    border-radius: 16px;
-
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    border-radius: 15px;
 }
 
 .cabecalho h1 {
@@ -56,61 +62,58 @@ body {
 }
 
 .cabecalho p {
-    color: rgb(110, 150, 140);
-
-    font-size: 1rem;
+    color: rgb(246, 126, 146);
 
     line-height: 1.5;
 }
 
 
+/* =========================
+   POSTS
+========================= */
 
 .posts {
     padding: 10px 0 30px;
 }
 
-
-
 .post {
     display: flex;
+
     align-items: center;
+
     gap: 25px;
 
-    margin-bottom: 25px;
+    margin-bottom: 20px;
+
     padding: 20px;
 
-    background-color: rgba(255, 255, 255, 0.95);
+    background-color: white;
 
-    border-radius: 14px;
+    border-radius: 12px;
 
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
-
-    transition: transform 0.2s ease,
-                box-shadow 0.2s ease;
-}
-
-.post:hover {
-    transform: translateY(-3px);
-
-    box-shadow: 0 7px 15px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
 
+/* =========================
+   IMAGENS
+========================= */
 
 .post img {
-    width: 130px;
-    height: 130px;
+    width: 120px;
+    height: 120px;
 
     flex-shrink: 0;
 
     object-fit: cover;
 
     border-radius: 50%;
-
-    border: 4px solid rgb(245, 214, 219);
 }
 
 
+/* =========================
+   CONTEÚDO
+========================= */
 
 .post-conteudo {
     flex: 1;
@@ -130,8 +133,6 @@ body {
     color: rgb(45, 112, 112);
 
     font-size: 1.35rem;
-
-    line-height: 1.3;
 }
 
 .post p {
@@ -141,23 +142,28 @@ body {
 }
 
 
+/* =========================
+   LISTA
+========================= */
 
 .lista-series {
-    margin: 15px 0;
+    padding-left: 20px;
 
-    list-style: none;
+    margin-bottom: 15px;
 }
 
 .lista-series li {
-    margin-bottom: 7px;
-
-    line-height: 1.4;
+    margin-bottom: 6px;
 }
 
 
+/* =========================
+   BOTÕES
+========================= */
 
 .botoes {
     display: flex;
+
     gap: 8px;
 
     margin-top: 15px;
@@ -169,23 +175,17 @@ body {
     background-color: rgb(245, 214, 219);
 
     border: none;
+
     border-radius: 20px;
 
     color: rgb(246, 126, 146);
 
-    font-size: 0.95rem;
-    font-weight: bold;
-
     cursor: pointer;
 
-    transition: transform 0.2s ease,
-                background-color 0.2s ease,
-                color 0.2s ease;
+    font-weight: bold;
 }
 
 .botoes button:hover {
-    transform: scale(1.08);
-
     background-color: rgb(246, 126, 146);
 
     color: white;
@@ -198,9 +198,12 @@ body {
 }
 
 
+/* =========================
+   RODAPÉ
+========================= */
 
 .rodape {
-    padding: 20px 10px 30px;
+    padding: 20px;
 
     text-align: center;
 }
@@ -214,34 +217,9 @@ body {
 }
 
 
-
-@media (max-width: 768px) {
-
-    .cabecalho {
-        padding: 20px 0;
-    }
-
-    .cabecalho .container {
-        padding: 25px 20px;
-    }
-
-    .cabecalho h1 {
-        font-size: 1.7rem;
-    }
-
-    .post {
-        gap: 20px;
-        padding: 18px;
-    }
-
-    .post img {
-        width: 110px;
-        height: 110px;
-    }
-
-}
-
-
+/* =========================
+   RESPONSIVIDADE
+========================= */
 
 @media (max-width: 600px) {
 
@@ -250,13 +228,11 @@ body {
     }
 
     .cabecalho {
-        padding: 15px 0;
+        padding: 20px 0;
     }
 
     .cabecalho .container {
         padding: 20px 15px;
-
-        border-radius: 12px;
     }
 
     .cabecalho h1 {
@@ -273,31 +249,25 @@ body {
     .post {
         flex-direction: column;
 
-        align-items: center;
+        text-align: center;
 
         padding: 20px;
-
-        text-align: center;
     }
 
     .post img {
-        width: 120px;
-        height: 120px;
+        width: 110px;
+        height: 110px;
     }
 
     .post-conteudo {
         width: 100%;
     }
 
-    .post h2 {
-        font-size: 1.2rem;
-    }
-
 
     .lista-series {
-        text-align: left;
-
         display: inline-block;
+
+        text-align: left;
     }
 
 
@@ -306,39 +276,7 @@ body {
     }
 
 
-    .rodape {
-        padding: 15px;
-    }
-
     .direitos {
         font-size: 0.8rem;
     }
-
-}
-
-
-
-@media (max-width: 400px) {
-
-    .cabecalho h1 {
-        font-size: 1.2rem;
-    }
-
-    .cabecalho p {
-        font-size: 0.8rem;
-    }
-
-    .post {
-        padding: 15px;
-    }
-
-    .post img {
-        width: 100px;
-        height: 100px;
-    }
-
-    .post h2 {
-        font-size: 1.1rem;
-    }
-
 }
