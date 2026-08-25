@@ -1,93 +1,86 @@
-:root {
-    --cor-rosa-claro: rgb(245, 214, 219);
-    --cor-rosa-forte: rgb(246, 126, 146);
-    --cor-verde-claro: rgba(183, 234, 217, 0.7);
-    --cor-verde-texto: rgb(45, 112, 112);
-    --cor-footer: rgb(110, 150, 140);
-}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>⊹ ࣪ ˖ ໒꒱ Blog de Desenhos e Séries da Rita!</title>
+    <!-- Importação de fontes modernas e fofas do Google Fonts -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Fredoka:wght@300..700&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <!-- Vinculação do arquivo CSS externo -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-body {
-    margin: 0;
-    padding: 20px;
-    font-family: sans-serif;
-    background: linear-gradient(135deg, rgb(253, 235, 238) 0%, rgb(218, 245, 237) 100%);
-    min-height: 100vh;
-}
+    <header>
+        <h1>⊹ ࣪ ˖ ໒꒱ Blog de Desenhos e Séries da Rita! ♡</h1>
+        <p>𝜗ৎ ❝Compartilhando o conhecimento de animações, séries e filmes❞ 𝜗ৎ</p>
+    </header>
 
-header {
-    background-color: var(--cor-rosa-claro);
-    color: var(--cor-rosa-forte);
-    text-align: center;
-    max-width: 800px;
-    margin: 0 auto 20px auto;
-    padding: 20px;
-    border-radius: 12px;
-}
+    <main>
+        <article>
+            <img src="https://github.com" alt="unicórnio fofo segurando sorvete em pixel art">
+            <div class="artigo-conteudo">
+                <p class="artigo-autor">Meu primeiro post ꉂ(˵˃ ᗜ ˂˵)</p>
+                <h2>Meu primeiro post sobre desenhos e séries! ✐</h2>
+                <p class="artigo-meta">Por: Rita de Cássia ⚝</p>
+                <p class="artigo-texto">Seja bem-vindo/a ao meu blog de desenhos e séries!!! ^^</p>
+                <div class="botoes-container">
+                    <button>🐿️ <span>0</span></button>
+                    <button>🎀 <span>0</span></button>
+                </div>
+            </div>
+        </article>
 
-main {
-    background-color: var(--cor-verde-claro);
-    color: var(--cor-verde-texto);
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    border-radius: 12px;
-}
+        <article>
+            <img src="https://github.com" alt="cabeça de unicórnio rosa em pixel art">
+            <div class="artigo-conteudo">
+                <p class="artigo-autor">Meu segundo post (˶ᵔ ᵕ ᵔ˶)</p>
+                <h2>Tier list: Desenhos e/ou séries! ✐</h2>
+                <p class="artigo-meta">Por: Rita de Cássia ⚝</p>
+                <ul>
+                    <li>1. Avatar, a lenda de Aang</li>
+                    <li>2. Steven Universo</li>
+                    <li>3. Cowboy Bebop</li>
+                    <li>4. Evangelion</li>
+                    <li>5. O Problema Dos 3 Corpos</li>
+                </ul>
+                <div class="botoes-container">
+                    <button>🐿️ <span>0</span></button>
+                    <button>🎀 <span>0</span></button>
+                </div>
+            </div>
+        </article>
+    </main>
 
-article {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-    background-color: white;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-}
+    <footer>
+        <p class="direitos">© Todos os direitos estão reservados ao autor do blog - Rita de Cássia Souza Nogueira</p>
+    </footer>
 
-img {
-    width: 90px;
-    height: 90px;
-    margin-right: 20px;
-    border-radius: 50%;
-    object-fit: cover;
-}
+    <script>
+        const botoes = document.querySelectorAll("button");
+        botoes.forEach(function (botao) {
+            let curtiu = false;
+            botao.addEventListener("click", botaoClicado);
 
-.artigo-autor {
-    font-weight: bold;
-    color: var(--cor-rosa-forte);
-    margin-top: 0;
-}
+            function botaoClicado() {
+                let numeroSpan = botao.querySelector("span");
+                let quantidadeAtual = Number(numeroSpan.textContent);
 
-ul {
-    list-style-type: none;
-    padding-left: 0;
-}
-
-button {
-    background-color: var(--cor-rosa-claro);
-    border: none;
-    padding: 6px 12px;
-    border-radius: 20px;
-    color: var(--cor-rosa-forte);
-    cursor: pointer;
-    font-weight: bold;
-    margin-right: 5px;
-    transition: 0.2s;
-}
-
-button:hover {
-    transform: scale(1.1);
-    background-color: var(--cor-rosa-forte);
-    color: white;
-}
-
-footer {
-    text-align: center;
-    padding: 20px;
-    color: var(--cor-footer);
-    font-size: 0.9rem;
-}
-
-.direitos {
-    text-align: center;
-    color: var(--cor-rosa-forte);
-}
+                if (curtiu === false) {
+                    numeroSpan.textContent = quantidadeAtual + 1;
+                    curtiu = true;
+                    botao.style.backgroundColor = "rgb(246, 126, 146)";
+                    botao.style.color = "white";
+                } else {
+                    numeroSpan.textContent = quantidadeAtual - 1;
+                    curtiu = false;
+                    botao.style.backgroundColor = "rgb(245, 214, 219)";
+                    botao.style.color = "rgb(246, 126, 146)";
+                }
+            }
+        });
+    </script>
+</body>
+</html>
